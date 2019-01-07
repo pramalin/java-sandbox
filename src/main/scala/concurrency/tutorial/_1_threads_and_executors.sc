@@ -1,7 +1,7 @@
 package future
 
 object _1_threads_and_executors {
-println( "Java 8 Concurrency Tutorial")           //> Java 8 Concurrency Tutorial
+println( "Java 8 Concurrency Tutorial Part 1")    //> Java 8 Concurrency Tutorial Part 1
 
 	/*
 	https://winterbe.com/posts/2015/04/07/java8-concurrency-tutorial-thread-executor-examples/

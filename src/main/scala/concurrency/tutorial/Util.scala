@@ -21,4 +21,28 @@ object Util {
       println("shutdown finished")
     }
   }
+
+  // for part 2.
+  def stop(executor: ExecutorService) {
+    try {
+      executor.shutdown()
+      executor.awaitTermination(60, TimeUnit.SECONDS)
+    } catch {
+      case e: InterruptedException => println("termination interrupted")
+    } finally {
+      if (!executor.isTerminated()) {
+        println("killing non-finished tasks")
+      }
+      executor.shutdownNow()
+    }
+  }
+    
+  def sleep(seconds: Int) {
+    try {
+      TimeUnit.SECONDS.sleep(seconds)
+    } catch {
+      case e: InterruptedException => throw new IllegalStateException(e)
+    }
+
+  }
 }

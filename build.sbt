@@ -23,4 +23,6 @@ libraryDependencies += "co.fs2" %% "fs2-io" % "1.0.1"
 // optional reactive streams interop
 libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "1.0.1"
 
+libraryDependencies += "org.scala-lang.modules" %%  "scala-java8-compat"  % "0.8.0"
+
 addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.3")
